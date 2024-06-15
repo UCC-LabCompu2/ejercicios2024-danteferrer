@@ -20,62 +20,90 @@
 <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
 <form id="formulario_subscripcion">
     <p>
-        Nombre:<input type="text" name="nombre" placeholder="Nombre">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Nombre" id="nombre">
+
     </p>
     <p>
-        Apellido:<input type="text" name="apellido" placeholder="Apellido">
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" placeholder="Apellido" id="apellido">
+
     </p>
     <p>
-        Sexo: Masculino<input type="radio" name="sexo" value="masculino"> Femenino<input type="radio" name="sexo"
-                                                                                         value="femenino">
+        Sexo: <label for="masculino">Masculino</label>
+        <input type="radio" name="sexo" value="masculino" id="masculino">
+        <label for="femenino">Femenino</label>
+        <input type="radio" name="sexo"
+               value="femenino" id="femenino">
+
     </p>
     <p>
-        Edad:<input type="number" name="edad" placeholder="Edad">
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad" placeholder="Edad" id="edad">
+
     </p>
     <p>
-        Email:<input type="email" name="emile" placeholder="Emile">
+        <label for="emile"> Email:</label>
+        <input type="email" name="emile" placeholder="Emile" id="emile">
+
     </p>
     <p>
-        Usuario:<input type="text" name="usuario" placeholder="Usuario">
+        <label for="usuario">Usuario: </label>
+        <input type="text" name="usuario" placeholder="Usuario" id="usuario">
+
     </p>
     <p>
-        Password:<input type="password" name="password" placeholder="Password">
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="Password" id="password">
+
     </p>
     <p>
-        Confirmar Password:<input type="password" name="confirm_pass" placeholder="Confirmar Password">
+        <label for="confirmar">Confirmar Password:</label>
+        <input type="password" name="confirm_pass" placeholder="Confirmar Password" id="confirmar">
+
     </p>
     <p>
-        Tipo de servicio: Free<input type="checkbox" name="tipo" value="free"> / Standard<input type="checkbox"
-                                                                                                name="tipo"
-                                                                                                value="standar"> /
-        Premium<input type="checkbox" name="tipo" value="premium">
+        Tipo de servicio: <label for="free">Free</label>
+        <input type="checkbox" name="tipo" value="free" id="free">
+     / <label for="standar">Standard</label>
+        <input type="checkbox"
+               name="tipo"
+               value="standar" id="standar">
+    /
+        <label for="premium"> Premium</label>
+        <input type="checkbox" name="tipo" value="premium" id="premium">
+
     </p>
     <p>
-        Tema:
-        <select>
-            <option>
-                Política
-            </option>
-            <option>
-                Negocios
-            </option>
-            <option>
-                Tecnología
-            </option>
-            <option>
-                Salud
-            </option>
+        <label for="tema">Tema:</label>
+
+            <select id="tema">
+                <option value="politico">
+                    Política
+                </option>
+                <option value="negocio">
+                    Negocios
+                </option>
+                <option value="tecnologia">
+                    Tecnología
+                </option>
+                <option value="salud">
+                    Salud
+                </option>
 
 
-        </select>
+            </select>
+
     </p>
     <p>
-        Agregue un comentario:<textarea >
+        <label for="comentario">Agregue un comentario:</label>
+<textarea id="comentario">
 
 </textarea>
+
     </p>
     <p>
-    <button type="button">Boton de Enviar</button>
+        <button type="button">Boton de Enviar</button>
     </p>
 </form>
 
