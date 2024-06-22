@@ -6,13 +6,16 @@
  * @return
  */
 function cambiarUnidades(id,value){
-    if(isNaN(value)){
-        var metro, pulgada, pie, yarda;
+    var metro, pulgada, pie, yarda;
+    // if (value.include(",")){
+    //     value=value.replace(",",".")
+    // }
+    if(isNaN(value)) {
         alert("se ingreso un valor incorecto");
-        document.lasUnidades.unid_metro.value="";
-        document.lasUnidades.unid_pulgada.value=""
-        document.lasUnidades.unid_pie.value=""
-        document.lasUnidades.unid_yarda.value=""
+        document.lasUnidades.unid_metro.value = "";
+        document.lasUnidades.unid_pulgada.value = ""
+        document.lasUnidades.unid_pie.value = ""
+        document.lasUnidades.unid_yarda.value = ""
     }else if (id=="metro"){
         metro=value;
         pulgada=39.3701*value;
@@ -34,10 +37,10 @@ function cambiarUnidades(id,value){
         pie=3*value;
         metro=0.9144*value;
     }
-    document.lasUnidades.unid_metro.value= metro;
-    document.lasUnidades.unid_pulgada.value=pulgada;
-    document.lasUnidades.unid_pie.value=pie;
-    document.lasUnidades.unid_yarda.value=yarda;
+    document.lasUnidades.unid_metro.value= Math.round(metro*100)/100;
+    document.lasUnidades.unid_pulgada.value= Math.round(pulgada*100)/100;
+    document.lasUnidades.unid_pie.value= Math.round(pie*100)/100;
+    document.lasUnidades.unid_yarda.value= Math.round(yarda*100)/100;
 }
 function convertirGR(id){
     var grad, rad;
