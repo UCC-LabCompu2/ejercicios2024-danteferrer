@@ -7,28 +7,37 @@
  */
 function cambiarUnidades(id,value){
     if(isNaN(value)){
+        var metro, pulgada, pie, yarda;
         alert("se ingreso un valor incorecto");
         document.lasUnidades.unid_metro.value="";
         document.lasUnidades.unid_pulgada.value=""
         document.lasUnidades.unid_pie.value=""
         document.lasUnidades.unid_yarda.value=""
     }else if (id=="metro"){
-        document.lasUnidades.unid_pulgada.value=39.3701*value;
-        document.lasUnidades.unid_pie.value=3.28084*value;
-        document.lasUnidades.unid_yarda.value=1.09361*value;
+        metro=value;
+        pulgada=39.3701*value;
+        pie=3.28084*value;
+        yarda=1.09361*value;
     }else if (id=="pulgada"){
-        document.lasUnidades.unid_metro.value=0.0254*value;
-        document.lasUnidades.unid_pie.value=0.0833333*value;
-        document.lasUnidades.unid_yarda.value=0.0277778*value;
+        pulgada=value;
+        metro=0.0254*value;
+        pie=0.0833333*value;
+        yarda=0.0277778*value;
     }else if (id=="pie"){
-        document.lasUnidades.unid_pulgada.value=12*value;
-        document.lasUnidades.unid_metro.value=0.3048*value;
-        document.lasUnidades.unid_yarda.value=0.333333*value;
+        pie=value;
+        pulgada=12*value;
+        metro=0.3048*value;
+        yarda=0.333333*value;
     }else if (id=="yarda"){
-        document.lasUnidades.unid_pulgada.value=36*value;
-        document.lasUnidades.unid_pie.value=3*value;
-        document.lasUnidades.unid_metro.value=0.9144*value;
+        yarda=value;
+        pulgada=36*value;
+        pie=3*value;
+        metro=0.9144*value;
     }
+    document.lasUnidades.unid_metro.value= metro;
+    document.lasUnidades.unid_pulgada.value=pulgada;
+    document.lasUnidades.unid_pie.value=pie;
+    document.lasUnidades.unid_yarda.value=yarda;
 }
 function convertirGR(id){
     var grad, rad;
