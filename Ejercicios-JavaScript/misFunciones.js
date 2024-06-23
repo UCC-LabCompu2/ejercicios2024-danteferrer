@@ -86,22 +86,37 @@ function calcularDiv(){
     document.getElementsByName("div_total")[0].innerHTML=num1 / Number(num2);
 }
 function cargarWeb(){
-
     var cant, unidad, urlComp;
 
-    cant= document.getElementById("distancia").value;
-    unidad = document.getElementsByName("undades")[0].value;
+    cant = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
 
     urlComp = "segundaWeb.html#" + cant + "#" + unidad;
-    window.open(urlComp);
-
+    window.open(urlComp, "_self");
 }
-function cargarResultado(){
-    var urlcomp, cant, unidad;
-    urlcomp=window.location.href.split("/")[5];
-    cant= urlcomp.split("#")[1];
-    unidad= urlcomp.split("#")[2];
-    document.getElementById("dist").value= cant + " " + unidad;
 
+function cargarResultado(){
+    var urlComp, cant, unidad;
+    urlComp = window.location.href.split("#");
+    cant = urlComp[1];
+    unidad = urlComp[2];
+    document.getElementById("dist").value = cant + " " + unidad;
+}
+
+function guardarLocal(){
+    let distancia, unidad;
+    distancia = document.getElementById('distancia').value;
+    unidad = document.getElementsByName('unidades')[0].value;
+    localStorage.setItem("distanciaLS", distancia);
+    localStorage.setItem("unidadLS", unidad);
+    window.open('2_web.html', "_self");
+}
+
+function cargarLocal(){
+    let cant, unid;
+
+    cant = localStorage.getItem("distanciaLS");
+    unid = localStorage.getItem("unidadLS");
+    document.getElementById("dist").value = cant + " " + unid;
 }
 
