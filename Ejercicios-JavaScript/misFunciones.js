@@ -85,4 +85,23 @@ function calcularDiv(){
     num2=document.getElementsByName("div_num2")[0].value;
     document.getElementsByName("div_total")[0].innerHTML=num1 / Number(num2);
 }
+function cargarWeb(){
+
+    var cant, unidad, urlComp;
+
+    cant= document.getElementById("distancia").value;
+    unidad = document.getElementsByName("undades")[0].value;
+
+    urlComp = '/ejercicios2024-danteferrer/Ejercicios-JavaScript/segundaWeb.html#' + cant + "#" + unidad;
+    window.open(urlComp);
+
+}
+function cargarResultado(){
+    var urlcomp, cant, unidad;
+    urlcomp=window.location.href.split("/")[5];
+    cant= urlcomp.split("#")[1];
+    unidad= urlcomp.split("#")[2];
+    document.getElementById("dist").value= cant + " " + unidad;
+
+}
 
