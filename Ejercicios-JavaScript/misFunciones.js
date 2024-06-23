@@ -92,7 +92,7 @@ function cargarWeb(){
     cant= document.getElementById("distancia").value;
     unidad = document.getElementsByName("undades")[0].value;
 
-    urlComp = '/ejercicios2024-danteferrer/Ejercicios-JavaScript/segundaWeb.html#' + cant + "#" + unidad;
+    urlComp = "segundaWeb.html#" + cant + "#" + unidad;
     window.open(urlComp);
 
 }
