@@ -119,4 +119,16 @@ function cargarLocal(){
     unid = localStorage.getItem("unidadLS");
     document.getElementById("dist").value = cant + " " + unid;
 }
-
+function dibujarCiruloCuadrado(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var yMax = canvas.height;
+    var xMax = canvas.width;
+    var margen =5;
+    ctx.fillStyle = "#992058";
+    ctx.fillRect(0 + margen,yMax - 40 - margen, 40, 40);
+    ctx.arc(xMax/2,yMax/2, 30, 0,2*Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = "#436357";
+    ctx.fill();
+}
