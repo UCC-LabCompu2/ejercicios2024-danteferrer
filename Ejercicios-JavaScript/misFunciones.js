@@ -132,3 +132,22 @@ function dibujarCiruloCuadrado(){
     ctx.fillStyle = "#436357";
     ctx.fill();
 }
+var bandera;
+function dibujar(event){
+    var canvas = document.getElementById("canvaDibujo");
+    var ctx = canvas.getContext("2d");
+    var posx = event.clientX;
+    var posy = event.clientY;
+    console.log(posx, posy);
+    canvas.onmousedown = function (){ bandera = true};
+    canvas.onmouseup = function (){bandera = false};
+    if (bandera){ctx.fillRect(posx, posy,5,5);
+        ctx.fill;}
+
+
+}
+function limpiar(){
+    var canvas = document.getElementById("canvaDibujo");
+    var ctx = canvas.getContext("2d");
+    canvas.width = canvas.width;
+}
