@@ -196,8 +196,8 @@ function dibujarImg(pos_x, pos_y) {
     }
 }
 x=0;
-dx=2;
-
+dx=5;
+y=0
 
 function animaAuto(){
     var canvas = document.getElementById("myCanvas");
@@ -206,10 +206,11 @@ function animaAuto(){
     var img = new Image();
     img.src = "images/auto.png";
     img.onload = function () {
-        ctx.drawImage(img, x, 100);
+        ctx.drawImage(img, x, y);
     }
     if (x>canvas.width){
         x=0;
+        y+=30;
     }
     x+=dx;
 }
